@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta http-equiv="Cache-Control"content="no-store"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <script src="./js/lib/jquery-3.4.1.min.js"></script>
+    <script src="./js/GetFontsize.js"></script>
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="stylesheet" href="./css/login.css" type="text/css">
+    <link rel="apple-touch-icon"href="./img/desktopicon.png"/>
+    <title>登录页面</title>
+</head>
+<body>
+    <div class="SignupSuccess">
+            <img src="./img/succession.png" style="width: 0.7rem; height: 0.7rem;">
+            <p>注册成功</p>
+    </div>
+    <div class="Signuperror">
+            <img src="./img/error.png" style="width: 0.7rem; height: 0.7rem;">
+            <p></p>
+    </div>
+    <img src="./img/enter logo.png" id="enterlogo">
+    <div class="FirstContainer">
+        <div id="text1">
+            <h2>观天下大事，畅所欲言<br/>做爱做的事情</h2>
+            <p>@广财学子 的社交圈<br/>这里是一个不受限制的天堂</p>
+        </div>
+        <button id="LoginButton">登 陆</button>
+        <button id="SignupButton">注 册</button>
+    </div>
+    <div class="SignupContainer">
+        <div><img src="./img/waring.png"><span>此用户已被注册</span></div>
+        <img src="./img/_icons--closebackbutton.png" class="backicon">
+        <input type="text" name="username" placeholder="用户名">
+        <input type="password" name="password1"  placeholder="密码">
+        <input type="password" name="password2"  placeholder="确认密码">
+        <input type="text" name="phonenumber"  placeholder="手机号" maxlength="11"><input type="button" name="getsmsNo" value="发送验证码">
+        <input type="text" name="smsNo"  placeholder="验证码">
+        <input type="button" name="SignupButton" value="注&nbsp&nbsp&nbsp册">
+    </div>
+    <div class="LoginContainer">
+        <img src="./img/_icons--closebackbutton.png" class="backicon">
+        <input type="text" name="username" placeholder="手机号">
+        <input type="password" name="password"  placeholder="密码">
+        <input type="button" name="LoginButton" value="登&nbsp&nbsp&nbsp陆">
+    </div>
+    <script src="./js/lib/jquery-3.4.1.min.js"></script>
+    <script src="./js/lib/jquery.cookie.js"></script>
+    <script src="./js/GetFontsize.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/lib/jquery.md5.js"></script>
+</body>
+</html>

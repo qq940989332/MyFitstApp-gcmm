@@ -1,0 +1,153 @@
+body{
+    background-image: url(../img/bg-copylogin-img1.png),url(../img/background_imagelogin-img2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/* 介绍页面样式 */
+#enterlogo{
+    margin-top:2.5rem;
+    margin-bottom: 1.7rem;
+    margin-left: 2.6rem;
+    width: 4.8rem;
+    height: 3.0rem;
+}
+#text1{
+    color: 	rgb(235, 230, 230);
+    font-size: 0.5rem;
+    text-align: center;
+}
+/* 介绍页面的两个按钮 */
+#LoginButton{
+    margin-top: 2.5rem;
+    margin-left: 1.3rem;
+    margin-bottom: 0.01rem;
+    width: 7.47rem;
+    height: 1.17rem;
+    border-radius: 0.59rem;
+    border: none;
+    background: #ffffff;
+    color: #F78361;
+    outline: none;
+}
+#SignupButton{
+    margin-left: 1.3rem;
+    width: 7.47rem;
+    height: 1.17rem;
+    border-radius: 0.59rem;
+    border: none;
+    color:#ffffff;
+    background: linear-gradient(220deg, #F78361, #F54B64);
+    outline: none;
+}
+/* 注册框的样式 */
+.SignupContainer{
+    width: 7rem;
+    margin-top: -1.5rem;
+    margin-left: 1.7rem;
+    display: none;
+    position: relative;
+    /* text-align: center; */
+}
+.SignupContainer div{
+    width: 4.5rem;
+    height: 0.5rem;
+    border-radius: 999em;
+    background-color:rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 1.0rem;
+    top: 0.8rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #ffffff;
+    display: none;
+}
+.SignupContainer div span{
+    line-height: 0.5rem;
+    vertical-align: 35%;
+}
+.SignupContainer div img{
+    width: 0.4rem;
+    height: 0.4rem;
+    /* position: relative; */
+    opacity: 0.6;
+    padding-right: 0.2rem;
+    vertical-align: super;
+    line-height: 0.5rem;
+}
+.SignupContainer>img,.LoginContainer img{
+    background-color:rgba(255, 255, 255, 0.3) ;
+    border-radius: 50%;
+}
+.SignupContainer input,.LoginContainer input{
+    color: #ffffff;
+    width: 6rem;
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 999em ;
+    padding-left: 0.5rem;
+    /* line-height: 1rem; */
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #ffffff;
+}
+.SignupContainer input:nth-child(6){
+    width: 3rem;
+    margin-right:0.1rem;
+}
+.SignupContainer input:nth-child(7){
+    /* 获取验证码按钮 */
+    width: 2.9rem;
+    padding: 0;
+    /* font-size: 0.1rem; */
+    -webkit-text-size-adjust: none;
+}
+.SignupContainer input:nth-child(9){
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    box-sizing: content-box;
+    background:linear-gradient(220deg, #F78361, #F54B64);
+}
+/* 登录框界面的样式 部分和注册框共用*/
+.LoginContainer{
+    width: 7rem;
+    margin-top: -1.0rem;
+    margin-left: 1.7rem;
+    display: none;
+}
+.LoginContainer input[type="button"]{
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    box-sizing: content-box;
+    background:linear-gradient(220deg, #F78361, #F54B64);
+}
+/* 提示框样式 */
+.SignupSuccess{
+    /* 注册成功界面 */
+    position: absolute;
+    color: black;
+    height: 2.5rem;
+    width: 3.5rem;
+    background-color:rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border-radius: 15%;
+    font-size: 0.5rem;
+    padding-top: 0.7rem;
+    left:3rem;
+    top:8rem;
+    display: none;
+}
+.Signuperror{
+    /* 注册失败界面 */
+    position: absolute;
+    color: black;
+    height: 2.5rem;
+    width: 3.5rem;
+    background-color:rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border-radius: 15%;
+    font-size: 0.5rem;
+    padding-top: 0.7rem;
+    left:3rem;
+    top:8rem;
+    display: none;
+}

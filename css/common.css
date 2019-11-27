@@ -1,0 +1,285 @@
+/* @media (min-width:640px){html{font-size:24px;}}
+@media (min-width:631px) and (max-width:639px){html{font-size:23.66px;}}
+@media (min-width:622px) and (max-width:630px){html{font-size:23.33px;}}
+@media (min-width:613px) and (max-width:621px){html{font-size:23px;}}
+@media (min-width:604px) and (max-width:612px){html{font-size:22.66px;}}
+@media (min-width:595px) and (max-width:603px){html{font-size:22.33px;}}
+@media (min-width:586px) and (max-width:594px){html{font-size:22px;}}
+@media (min-width:577px) and (max-width:585px){html{font-size:21.66px;}}
+@media (min-width:568px) and (max-width:576px){html{font-size:21.33px;}}
+@media (min-width:559px) and (max-width:567px){html{font-size:21px;}}
+@media (min-width:550px) and (max-width:558px){html{font-size:20.66px;}}
+@media (min-width:541px) and (max-width:549px){html{font-size:20.33px;}}
+@media (min-width:533px) and (max-width:540px){html{font-size:20px;}}
+@media (min-width:524px) and (max-width:532px){html{font-size:19.66px;}}
+@media (min-width:515px) and (max-width:523px){html{font-size:19.33px;}}
+@media (min-width:506px) and (max-width:514px){html{font-size:19px;}}
+@media (min-width:497px) and (max-width:505px){html{font-size:18.66px;}}
+@media (min-width:488px) and (max-width:496px){html{font-size:18.33px;}}
+@media (min-width:480px) and (max-width:487px){html{font-size:18px;}}
+@media (min-width:471px) and (max-width:479px){html{font-size:17.66px;}}
+@media (min-width:462px) and (max-width:470px){html{font-size:17.33px;}}
+@media (min-width:453px) and (max-width:461px){html{font-size:17px;}}
+@media (min-width:444px) and (max-width:452px){html{font-size:16.66px;}}
+@media (min-width:435px) and (max-width:443px){html{font-size:16.33px;}}
+@media (min-width:426px) and (max-width:434px){html{font-size:16px;}}
+@media (min-width:417px) and (max-width:425px){html{font-size:15.66px;}}
+@media (min-width:408px) and (max-width:416px){html{font-size:15.33px;}}
+@media (min-width:400px) and (max-width:407px){html{font-size:15px;}}
+@media (min-width:391px) and (max-width:399px){html{font-size:14.66px;}}
+@media (min-width:382px) and (max-width:390px){html{font-size:14.33px;}}
+@media (min-width:374px) and (max-width:381px){html{font-size:14px;}}
+@media (min-width:365px) and (max-width:373px){html{font-size:13.66px;}}
+@media (min-width:356px) and (max-width:364px){html{font-size:13.33px;}}
+@media (min-width:347px) and (max-width:355px){html{font-size:13px;}}
+@media (min-width:338px) and (max-width:346px){html{font-size:12.66px;}}
+@media (min-width:329px) and (max-width:337px){html{font-size:12.44px;}}
+@media (max-width:328px){html{font-size:12px;}} */
+
+*{
+    margin: 0;
+    padding: 0;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+}
+li{
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    /* height: 100%; */
+}
+input{
+    outline: none;
+    border: none;
+}
+/* 取消苹果自带样式 */
+input[type="button"], input[type="submit"], input[type="reset"] { 
+    -webkit-appearance: none;
+}
+textarea { -webkit-appearance: none;}
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {-webkit-text-size-adjust:none;}
+div{
+    word-break:break-all
+}
+
+/* 帖子框 */
+.ContentManager{
+    width: 9.2rem;
+    border-radius: 5%;
+    background: #242a37;
+    box-shadow: 0px 0.1rem 0.5rem;
+    margin: 0.8rem auto;
+    overflow: hidden;
+}
+.PandGID{
+    /* postid和groupid */
+    display: none;
+}
+.ArticleIconName{
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* margin-left: 0.5rem; */
+    margin:0.3rem 0 0.3rem 0.5rem;
+}
+.ArticleIconName .Icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.ArticleIconName p:nth-child(1){
+    font-size: 0.6rem;
+    color: #ffffff;
+}
+.ArticleIconName p:nth-child(2){
+    font-size: 0.4rem;
+    color: #5b606d;
+}
+.Article{
+    width: 8.6rem;
+    margin: 0 auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+    font-size: 0.5rem;
+    color: #ffffff;
+}
+.Location{
+    display: flex;
+    align-items: center;
+    font-size: 0;
+    color: #7A7B7D;
+    margin-left: 0.3rem;
+    margin-top: 0.2rem;
+}
+.Location img{
+    vertical-align: middle;
+}
+.Location span{
+    font-size: 0.4rem;
+    vertical-align: middle;
+}
+.Circle{
+    width: 8.6rem;
+    margin: 0.3rem auto 0 auto;
+    font-size: 0;
+}
+.Circle img{
+    width: 0.4rem;
+    height: 0.4rem;
+    vertical-align: middle;
+    margin-right: 0.1rem;
+}
+.Circle span{
+    color: khaki;
+    font-size: 0.4rem;
+    vertical-align: middle;
+}
+.LikeAndComment{
+    width: 8.6rem;
+    color: #ddc0c0;
+    margin: 0.2rem auto;
+    font-size: 0;
+    overflow: hidden;
+}
+.LikeAndComment div{
+    float: left;
+}
+.LikeAndComment div:nth-child(2){
+    margin-left: 0.3rem;
+}
+.LikeAndComment img{
+    width: 0.5rem;
+    height: 0.5rem;
+    vertical-align: middle;
+}
+.LikeAndComment div:nth-child(2) img{
+    width: 0.45rem;
+    height: 0.45rem;
+}
+.LikeAndComment span{
+    vertical-align: middle;
+    font-size: 0.4rem;
+}
+/* 图片部分 */
+.ImgContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    width: 8.2rem;
+    margin: 0 auto;
+}
+.ImgContainer img{
+    width:2.5rem;
+    height:2.5rem;
+    margin-bottom: 0.1rem;
+    border-radius: 5%;
+    border: 0.05rem solid #8a8a8a;
+}
+/* 放大图 */
+.Alertimage{
+    width: 9rem;
+    height: 17rem;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.596);
+    left: 0.5rem;
+    top: 0.8rem;
+    z-index: 3;
+    font-size: 0;
+    overflow: hidden;
+    display: none;
+    z-index: 10;
+    padding: 0.5rem 0 0.5rem 0;
+}
+.Bigimage{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* height: 100%; */
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+/* 图片部分结束 */
+
+.ArticleContainer input[type="button"]{
+    display: block;
+    width: 4rem;
+    height: 1rem;
+    border-radius:999em;
+    background-color: #242a37;
+    box-shadow: 0 0.1rem 0.5rem #000000;
+    font-size: 0.5rem;
+    color: #ffffff;
+    margin: 0 auto 2.5rem auto;
+}
+.NoPage{
+    text-align: center;
+    font-size: 0.6rem;
+    color: #ffffff;
+    margin-bottom: 2.6rem;
+}
+/* 提示框样式 */
+.Alerterror{
+    /* 失败界面 */
+    position: absolute;
+    color: black;
+    height: 2.5rem;
+    width: 3.5rem;
+    background-color:rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border-radius: 15%;
+    font-size: 0.5rem;
+    padding-top: 0.7rem;
+    left:3rem;
+    top:8rem;
+    display: none;
+    z-index: 5;
+}
+.Alertsuccess{
+    /* 成功界面 */
+    position: absolute;
+    color: black;
+    height: 2.5rem;
+    width: 3.5rem;
+    background-color:rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border-radius: 15%;
+    font-size: 0.5rem;
+    padding-top: 0.7rem;
+    left:3rem;
+    top:8rem;
+    display: none;
+    z-index: 5;
+}
+/* 底部固定栏 */
+#Bottombar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #242a37;
+    box-shadow: 0px -0.1rem 0.5rem #000000b2;
+    width: 10rem;
+    height: 1.5rem;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.3rem;
+    text-align: center;
+}
+#Bottombar div{
+    flex:1
+}
+#Bottombar div:nth-child(1),#Bottombar div:nth-child(2){
+    border-right: 2px solid #393e4b;
+}

@@ -1,0 +1,71 @@
+div{
+    box-sizing: border-box;
+}
+body{
+    background-color: #242a37;
+}
+/* 顶部固定栏 */
+#TopBar{
+    font-size: 0;
+    width: 10rem;
+    height: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #242a37;
+    box-shadow: 0px 0.1rem 0.3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+#TopBar input{
+    font-size: 0.4rem;
+    height: 0.8rem;
+    width: 5.7rem;
+    vertical-align: middle;
+    margin-right: 0.2rem;
+    background-color: #393e4b;
+    border-radius: 999em;
+    padding-left: 0.5rem;
+    color:#8a8a8a;
+}
+#TopBar .SlideDown{
+    width: 10rem;
+    /* height: 4rem; */
+    background-color: #393e4b;
+    position: absolute;
+    top:1.1rem;
+    font-size: 0.4rem;
+    color: #8a8a8a;
+    padding-left: 0.3rem;
+    display: none;
+}
+#TopBar .SlideDown li{
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: 0.01rem solid black;
+}
+#TopBar .SlideDown li:last-child{
+    border-bottom:none
+}
+#TopBar img{
+    vertical-align: middle;
+}
+#TopBar .TopBarUpLoad{
+    opacity: 0;
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    font-size: 0;
+    padding: 0;
+}
+/* 底部固定栏 */
+#Bottombar div:nth-child(1){
+    color: rgb(233, 84, 84);
+}
+/* 文章部分 */
+.ArticleContainer{
+    margin-top: 2.0rem;
+    margin-bottom: 2.5rem;
+}

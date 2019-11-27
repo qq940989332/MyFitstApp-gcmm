@@ -1,0 +1,135 @@
+div{
+    box-sizing: border-box;
+}
+body{
+    background-color: #242a37;
+}
+.TopBar{
+    padding: 0 0.2rem 0 0.2rem;
+    width: 10rem;
+    height: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.Title{
+    width: 10rem;
+    position: fixed;
+    font-size: 0.5rem;
+    color: white;
+    background-color:#242a37 ;
+    top: 1.5rem;
+    left: 0rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.05rem solid #545963;
+    z-index: 2;
+}
+#Icon{
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 3rem auto 1.5rem auto;
+}
+#Icon p{
+    width: 2.2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.534);
+    color: white;
+    font-size: 0.27rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 0rem;
+}
+#Icon img{
+    width: 2.2rem;
+    height: 2.2rem;
+    /* border-radius: 50%; */
+}
+.Message{
+    margin: 0 auto;
+    width: 9.2rem;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    font-size: 0.5rem;
+}
+.Message li{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 1.5rem;
+}
+.Message input{
+    color: black;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 0.8rem;
+    font-size: 0.5rem;
+    border-radius: 999em;
+}
+.BackGround{
+    width: 9rem;
+    margin: 0 auto;
+    font-size: 0.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.BackGround div{
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10%;
+    font-size: 0;
+    overflow: hidden;
+}
+.BackGround img{
+    height: 4rem;
+    width: 4rem;
+}
+.LogoutButton{
+    display: block;
+    margin: 1rem auto 1rem auto;
+    width: 5rem;
+    height: 1.17rem;
+    border-radius: 0.59rem;
+    border: none;
+    background: #F78361;
+    color: white;
+    outline: none;
+}
+.AlertMsgError{
+    position: absolute;
+    font-size: 0;
+    background-color: #474950;
+    width: 6rem;
+    height: 0.8rem;
+    top: 2.6rem;
+    left: 2rem;
+    border-radius: 999rem;
+    text-align: center;
+    line-height: 0.8rem;
+    display: none;
+}
+.AlertMsgError img{
+    height: 0.6rem;
+    width: 0.6rem;
+    vertical-align: middle;
+}
+.AlertMsgError span{
+    font-size: 0.4rem;
+    vertical-align: middle;
+}
+.moxie-shim,.moxie-shim-html5{
+    background:none !important;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta http-equiv="Cache-Control"content="no-store"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <script src="./js/lib/jquery-3.4.1.min.js"></script>
+    <script src="./js/GetFontsize.js"></script>
+    <script src="./js/lib/common.js"></script>
+    <script src="./js/sendpost.js"></script>
+    <script src="https://cdn.staticfile.org/Plupload/2.1.1/moxie.js"></script>
+    <script src="https://cdn.staticfile.org/Plupload/2.1.1/plupload.dev.js"></script>
+    <script src="http://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.min.js"></script>
+    <script src="./js/lib/momoqiniu.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GzFiD7lc3GMi4K9EiixCxcWfDyZ8vTmR"></script>
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="stylesheet" href="./css/sendpost.css">
+    <title>发送页面</title>
+</head>
+<body>
+    <div class="Alertimage">
+                <img src="./img/close.png" class="close">
+                <img src="" class="Bigimage">
+    </div>
+    <div class="Alerterror">
+        <img src="./img/error.png" style="width: 0.7rem; height: 0.7rem;">
+        <p></p>
+    </div>
+    <div class="Alertsuccess">
+            <img src="./img/succession.png" style="width: 0.7rem; height: 0.7rem;">
+            <p></p>
+    </div>
+    <div id = "TopBar">
+        <div><img src="./img/top bar/sendposts.png"></div>
+        <div>发点新东西吧~</div>
+        <input type="button" value="发布" disabled="true">
+    </div>
+    <div class="PostContainer">
+        <div class="TextArea">
+            <div class="PostArea" contenteditable="plaintext-only"></div>
+            <div class="ImgContainer">
+            </div>
+            <div id="UpLoad">添加图片/视频
+            </div>
+        </div>
+        <div class="AddCircle">
+            <div class="CircleTop">
+                <div>
+                <img src="./img/circle.png">
+                <span>添加圈子</span>
+                </div>
+                <img src="./img/right icon.png">
+            </div>
+            <div class="CircleList">
+                <ul>
+                </ul>
+            </div>
+        </div>
+        <div class="Addadress">
+            <div class="AdressTop">
+                <div>
+                <img src="./img/location.png">
+                <span>定位</span>
+                </div>
+                <img src="./img/right icon.png">
+            </div>
+        </div>
+    </div>
+    <div id = "Bottombar">
+        <div><img src="./img/bottom bar/index.png"><p>逛逛圈子</p></div>
+        <div><img src="./img/bottom bar/sendpost.png"><p>发表文章</p></div>
+        <div><img src="./img/bottom bar/profileindex.png"><p>个人中心</p></div>
+    </div>
+</body>
+</html>

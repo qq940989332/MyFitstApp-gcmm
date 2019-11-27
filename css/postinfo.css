@@ -1,0 +1,201 @@
+div{
+    box-sizing: border-box;
+}
+body{
+    background-color: #242a37;
+}
+.User{
+    height: 2rem;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+.User img{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+.User div{
+    width: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+.User span{
+    width: 4rem;
+    font-size: 0.5rem;
+    color: white;
+}
+.User span:nth-child(2){
+    font-size: 0.4rem;
+}
+.Post{
+    font-size: 0.4rem;
+    color: white;
+    padding: 0 0.5rem 0.1rem 0.5rem;
+    /* text-align: center; */
+}
+.CircleInfo{
+    font-size: 0;
+    padding-left: 0.5rem;
+}
+.CircleInfo img{
+    vertical-align: middle;
+}
+.CircleInfo span{
+    font-size: 0.4rem;
+    color:khaki;
+    vertical-align: middle;
+}
+.LikeAndComment{
+    width: 10rem;
+    margin-left: 0;
+    padding-left: 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.1rem solid #545963;
+}
+.Comment li{
+    position: relative;
+}
+.ComIconAndName{
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.ComIconAndName div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    width: 3rem;
+}
+.ComIconAndName div:nth-child(2) span{
+    width: 3rem;
+    overflow: hidden;
+}
+.ComIconAndName>img{
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+}
+.ComIconAndName span{
+    font-size: 0.45rem;
+}
+.ComIconAndName span:nth-child(2){
+    font-size: 0.3rem;
+}
+.ZanAndCai{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 4.8rem;
+}
+.ZanAndCai img{
+    padding:0 0.2rem 0 0.2rem;
+}
+.CommentInfo{
+    color: white;
+    font-size: 0.4rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.2rem;
+    margin-left: 1.7rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 0.05rem solid #545963;
+}
+/* 删除按钮 */
+.DeleteIcon{
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.2rem;
+}
+.SlideLeft{
+    background-color: #545963;
+    position: absolute;
+    right: 0.9rem;
+    bottom: 0.2rem;
+    color:white;
+    width: 1.3rem;
+    height: 0.6rem;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: 0.6rem;
+    border-radius: 999em;
+    display: none;
+}
+/* 没有更多评论 */
+.NoComment{
+    color: white;
+    font-size: 0.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+/* 图片部分 */
+.ImgContainer{
+    width: 9.5rem;
+}
+.ImgContainer img{
+    width: 3rem;
+    height: 3rem;
+}
+.Alertimage{
+    width: 9.5rem;
+    left: 0.25rem;
+}
+/* 发表回复框 */
+.SendComment{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    display: none;
+    z-index: 4;
+}
+.Core{
+    width: 100%;
+    height: 10rem;
+    background-color: #242A37;
+    position: absolute;
+    bottom: 0;
+}
+.SendTitle{
+    padding: 0.3rem;
+    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-bottom: 0.02rem solid #000000;
+}
+.SendTitle span{
+    font-size: 0.5rem;
+    color: #8A8A8A;
+}
+.SendTitle input{
+    width: 1.5rem;
+    height: 0.8rem;
+    border-radius: 999em;
+    background-color: hotpink;
+}
+.SendTitle input:disabled{
+    background-color: #545864;
+}
+.CommentArea{
+    width: 9rem;
+    height: 7.5rem;
+    border-radius: 10%;
+    background-color:#545963;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.CommentArea div{
+    width: 8rem;
+    height: 7rem;
+    margin: 0.3rem auto;
+    outline: none;
+    font-size: 0.5rem;
+}
