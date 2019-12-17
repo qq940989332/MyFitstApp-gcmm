@@ -1,9 +1,9 @@
 $(function(){
     var like,comment,data1="",data2="";
-    var PostData = window.location.search.substring(1).split("&")
-    var AuthorID = PostData[0],PostId = PostData[1]
+    var PostData = window.location.search.substring(1).split("&") //获取上个页面传递的参数
+    var AuthorID = PostData[0],PostId = PostData[1] //获取上个页面传递的参数
     Myajax("GET",`${ip}${AuthorID}/post/detail/${PostId}/`,data1).then(
-        function(msg){
+        function(msg){ //根据后台获取的数据动态渲染页面
             // console.log(msg)
             if(msg.code==200)
             {
@@ -22,6 +22,12 @@ $(function(){
                 $(".LikeAndComment span:eq(1)").text(msg.data.post.comment_count)
                 for(x=0;x<msg.data.comments.length;x++,comment++)
                 {
+                    // 评论点赞部分
+                    // <div class="ZanAndCai">
+                    {/* <img src="./img/zan.png"> */}
+                    {/* <span>2</span> */}
+                    {/* <img src="./img/cai.png"> */}
+                    {/* </div> */}
                     if(!msg.data.comments[x].author.author_avatar) msg.data.comments[x].author.author_avatar="./img/testicon.jpg"
                     $(`<li>
                     <div class="ComIconAndName">
@@ -29,11 +35,6 @@ $(function(){
                         <div>
                             <span>${msg.data.comments[x].author.author_name}</span>
                             <span>${msg.data.comments[x].create_time}</span>
-                        </div>
-                        <div class="ZanAndCai">
-                            <img src="./img/zan.png">
-                            <span>2</span>
-                            <img src="./img/cai.png">
                         </div>
                     </div>
                     <div class="CommentInfo">
@@ -93,7 +94,7 @@ $(function(){
      },200))
 // 回退按钮
 $(".InfoBack").click(function (e) { 
-    window.history.back(-1)
+    window.location = "./index.html"
 });
 //点原图
 $(".close").click(function(){

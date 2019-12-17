@@ -244,7 +244,7 @@ div{
     left:3rem;
     top:8rem;
     display: none;
-    z-index: 5;
+    z-index: 99;
 }
 .Alertsuccess{
     /* 成功界面 */
@@ -260,7 +260,7 @@ div{
     left:3rem;
     top:8rem;
     display: none;
-    z-index: 5;
+    z-index: 99;
 }
 /* 底部固定栏 */
 #Bottombar{

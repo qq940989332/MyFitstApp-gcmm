@@ -3,10 +3,10 @@ $(function(){
     // 业务逻辑
     // 七牛上传
     var uploader = momoqiniu.setUp({
-        'domain': 'http://q08a66e5d.bkt.clouddn.com/',
+        'domain': 'http://q23jvt8uq.bkt.clouddn.com/',//第三方图片服务器地址
         'browse_btn': 'UpLoad',
         'uptoken_url': `${ip}c/uptoken/`,
-        'success': function (up, file, info) {
+        'success': function (up, file, info) { //上传完成后显示缩略图的回调函数
             $(`<img src="${file.name}"></img></a>`).appendTo(".ImgContainer");
             up.refresh()
         }
@@ -23,10 +23,10 @@ $(function(){
                     });
             return
         }
-        var TextData = $(".PostArea").text().trim();
+        var TextData = $(".PostArea").text().trim(); //对前后部分恶意添加空格进行清除
         var img = JSON.stringify($(".ImgContainer").html())
-        TextData = TextData.replace(/\n\n\n/g,"\n")
-        TextData = TextData.replace(/\n/g,"</br>")
+        TextData = TextData.replace(/\n\n\n/g,"\n") //对获取的内容进行正则匹配，连续换三行则合并为一行
+        TextData = TextData.replace(/\n/g,"</br>") //对获取的内容进行正则匹配，连续换三行则合并为一行
         if(LocationAttr == 1)
         Location = $(".AdressTop span").text()
         var JsonData = {
@@ -95,6 +95,7 @@ $(function(){
         uploader.refresh();
         if($(".PostArea").text().length >= 300)
         {
+        //当检测到字数大于300时 最多余部分进行裁剪
         $(".PostArea").text($(".PostArea").text().substr(0,299))
         //定位光标到最后
         var _div = document.querySelector('.PostArea');

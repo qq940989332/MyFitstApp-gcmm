@@ -8,7 +8,7 @@ $(function(){
         return Myajax("GET",`${ip}profile/`,data);
     }
     function  getArticle(msg){
-        // console.log(msg)//查看数据，可注释
+        console.log(msg)//查看数据，可注释
         if(n==0 && msg.data.posts.length==0) 
         {//没有文章
             $(".ArticleContainer").append(`
@@ -23,7 +23,11 @@ $(function(){
             else if(msg.data.avatar == null) msg.data.avatar = "./img/testicon.jpg"   
             $(".ArticleContainer input[type='button']").before(`
             <div class="ContentManager">
-                <span class="PandGID">${msg.data.posts[x].post_id}</span>
+                <span class="PandGID">
+                    <span class="PostId">${msg.data.posts[x].post_id}</span>
+                    <span class="GroupId">${msg.data.posts[x].group_id}</span>
+                    <span class="AuthorId">${msg.data.user_id}</span>
+                </span>
                 <div class="ArticleIconName">
                     <img src="${msg.data.avatar}" class="Icon">
                     <div class="NameandDate">
@@ -164,6 +168,14 @@ $(function(){
                 }, 1500);
                 });
         })
+    })
+    // 点帖子进帖子详情
+    $(document).on("click",".Article",function(e){
+        window.location = `./postinfo.html?${e.target.parentElement.children[0].children[2].innerText}&${e.target.parentElement.children[0].children[0].innerText}` 
+    })
+    // 点圈子进入圈子
+    $(document).on("click",".Circle span",function(e){
+        window.location = "./search.html?keyword="+"&"+"groupid="+encodeURI(e.target.parentElement.parentElement.children[0].children[1].innerText)
     })
     // 底部导航栏逻辑
     $("#Bottombar div:nth-child(1)").click(function(){

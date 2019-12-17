@@ -9,6 +9,7 @@
     // })()
 
 // http://172.27.193.36:5000/
+// http://192.168.1.135:5000/
 //自动获取fontsize
 (function (doc, win) {
       var docEl = doc.documentElement,
@@ -24,4 +25,4 @@
     doc.addEventListener('DOMContentLoaded', recalc, false);
     recalc();
 })(document, window);
-var ip = "http://192.168.1.135:5000/"
+var ip = "http://192.168.1.102:5000/"

@@ -31,7 +31,7 @@ $(function(){
             });
     })
     var uploader1 = momoqiniu.setUp({
-        'domain': 'http://q08a66e5d.bkt.clouddn.com/',
+        'domain': 'http://q23jvt8uq.bkt.clouddn.com/',
         'browse_btn': 'Icon',
         'uptoken_url': `${ip}c/uptoken/`,
         'success': function (up, file, info) {
@@ -39,7 +39,7 @@ $(function(){
         }
     })
     var uploader2 = momoqiniu.setUp({
-        'domain': 'http://q08a66e5d.bkt.clouddn.com/',
+        'domain': 'http://q23jvt8uq.bkt.clouddn.com/',
         'browse_btn': 'UpBackGround',
         'uptoken_url': `${ip}c/uptoken/`,
         'success': function (up, file, info) {

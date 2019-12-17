@@ -62,7 +62,6 @@ var momoqiniu = {
                 }
             }
         };
-
         //把args中的参数放到params中去
         for (var key in args) {
             params[key] = args[key];

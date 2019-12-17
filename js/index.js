@@ -1,5 +1,6 @@
 $(function(){
-    var n = 0,data={};
+    // 初始化部分
+    var n = 0,data={},Long = 0;
     // 防抖函数
     function debounce(fn, wait) {
         var timeout = null;      //定义一个定时器
@@ -19,7 +20,7 @@ $(function(){
         MakeIndex();
     }
     // ---------------------------防抖函数结束
-    //节流函数
+    // 节流函数
     // var throttle = function(func, delay) {
         // var timer = null;
         // var startTime = Date.now();  //设置开始时间
@@ -47,7 +48,7 @@ $(function(){
        return Myajax("GET",`${ip}`,data)
     }
     function MakeArticle(msg){
-        console.log(msg)
+        // console.log(msg)
         for(x=0;x<=msg.data.posts.length-1;x++,n++){
             if(!msg.data.posts[x].author_avatar) msg.data.posts[x].author_avatar = "./img/testicon.jpg"
             if(!msg.data.posts[x].images) msg.data.posts[x].images = `""`
@@ -114,6 +115,7 @@ $(function(){
 }
     async function MakeIndex(){
         await Getmessage_Ajax().then(function(msg){
+            // console.log(msg)
             if(msg.data.posts.length == 0){
                 $(".ArticleContainer")
                 .append(`<div class="NoPage">已经到底啦~</div>`);
@@ -133,9 +135,63 @@ $(function(){
         var keyword = $(".SearchArea").val().trim()
         window.location = "./search.html?keyword="+encodeURI(keyword)+"&"+"groupid="
     });
+    // 实时推送部分
+    setInterval(() => {
+        Myajax("GET",`${ip}post_list/`,{}).then(function(msg){
+            // console.log(msg)
+            if(msg.code == 200)
+            {
+                if($(".commentCircle").text()!= msg.data.comments_total) { 
+                    // 判断是否有新消息，若出现新消息，则进行推送
+                    Long = msg.data.comments_total
+                    $(".commentCircle").text(msg.data.comments_total).fadeIn("fast")
+                    $(".onCommentInfo ul li").remove() //刷新新消息
+                    for(k=0;k<msg.data.posts.length;k++){
+                        for(m=0;m<msg.data.posts[k].comments_quantity;m++){ //展现具体消息
+                            $(".onCommentInfo ul").append(`
+                            <li postid="${msg.data.posts[k].id}">
+                            <div class="onComIcon"><img src="${msg.data.posts[k].comments[m].author_avatar}"></div>
+                            <div class="onComCom">
+                                <div>${msg.data.posts[k].comments[m].author_name}
+                                <span>回复了你</span></div>
+                                <div>${msg.data.posts[k].comments[m].content}</div>
+                                <div>${msg.data.posts[k].comments[m].create_time}</div>
+                            </div>
+                            <div class="onComCon">
+                                <div class="onComConBac">
+                                    <div>
+                                        ${msg.data.posts[k].content}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>`)
+                        }
+                    }
+                }
+            }     
+        },function(){
+            $(".Alerterror p").text("请检查网络连接");
+            $(".Alerterror").fadeIn("fast",function(){
+            setTimeout(() => {
+                $(".Alerterror").fadeOut("fast")
+            }, 1500);
+        });
+        })
+    },500);
+    // 实时推送部分点击事件
+    $(".commentCircle").click(function(){
+        $(".onCommentContent").slideDown("fast");
+    })
+    $(".onCommentContent .bottomIcon").click(function(){
+        $(".onCommentContent").slideUp("fast");
+    })
+    $(".onCommentContent").on("click","li",function(){
+        window.location.replace(
+        `./postinfo.html?${sessionStorage.getItem("user_id")}&${$(this).attr("postid")}`)
+    })
     // 点头像进入个人中心
     $(document).on("click",".Icon",function(e){
-        console.log(e.target.parentNode.previousElementSibling.children[2].innerText)
+        // console.log(e.target.parentNode.previousElementSibling.children[2].innerText)
         window.location = `./profileindex.html?${e.target.parentNode.previousElementSibling.children[2].innerText}`
     })
     //点原图

@@ -65,12 +65,14 @@ body{
     align-items: center;
     font-size: 0;
     flex-wrap: wrap;
-    justify-content: space-around;
+    margin-left: 0.7rem;
+    /* justify-content: space-around; */
 }
 .ComIconAndName div:nth-child(2){
     display: flex;
     flex-wrap: wrap;
     width: 3rem;
+    margin-left: 0.3rem;
 }
 .ComIconAndName div:nth-child(2) span{
     width: 3rem;
@@ -101,7 +103,7 @@ body{
     font-size: 0.4rem;
     padding-bottom: 0.3rem;
     padding-right: 0.2rem;
-    margin-left: 1.7rem;
+    margin-left: 0.7rem;
     margin-bottom: 0.2rem;
     border-bottom: 0.05rem solid #545963;
 }

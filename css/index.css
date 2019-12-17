@@ -60,6 +60,27 @@ body{
     font-size: 0;
     padding: 0;
 }
+#TopBar .onComment{
+    position: relative;
+}
+#TopBar .commentCircle{
+    font-size: 0.5rem;
+    color: white;
+    text-align: center;
+    line-height: 0.9rem;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-image: url(../img/top\ bar/commentCircle.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    position: absolute;
+    top: -0.11rem;
+    left: -0.09rem;
+    padding-right: 0.1rem;
+}
 /* 底部固定栏 */
 #Bottombar div:nth-child(1){
     color: rgb(233, 84, 84);
@@ -67,5 +88,85 @@ body{
 /* 文章部分 */
 .ArticleContainer{
     margin-top: 2.0rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+}
+/* 消息通知页面部分 */
+.onCommentContent{
+    display: none;
+    position: fixed;
+    background-color: #242a37;
+    width: 10rem;
+    height: 9.7rem;
+    top: 1.5rem;
+    font-size: 0;
+    box-shadow:0px 1px 0.5rem;
+    z-index: 9;
+    padding-bottom: 0.5rem;
+}
+.onCommentInfo{
+    width: 10rem;
+    height: 9rem;
+    font-size: 0;
+    overflow: scroll;
+    z-index: 9;
+}
+.onCommentInfo li{
+    /* height: 2.5rem; */
+    padding: 0.3rem 0.2rem 0.3rem 0.2rem;
+    border-bottom:0.02rem solid black;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.onCommentInfo .onComIcon{
+    /* height: 3rem; */
+    width: 1.5rem;
+}
+.onCommentInfo .onComIcon img{
+    width: 100%;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.onCommentInfo .onComCom{
+    width: 6rem;
+    /* height: 2rem; */
+    color: white;
+    font-size: 0.4rem;
+    margin-left: 0.3rem;
+}
+.onComCom div:nth-child(1){
+    margin-bottom: 0.1rem;
+}
+.onComCom div:nth-child(1) span{
+    margin-left: 0.2rem;
+    color: #50535B;
+    font-weight: bold;
+}
+.onComCom div:nth-child(3){
+    color: #50535B;
+    font-size: 0.35rem;
+    font-weight: bold;
+}
+.onComCon{
+    width: 1.5rem;
+    /* height: 2rem; */
+}
+.onComConBac{
+    height: 1.5rem;
+    border-radius: 15%;
+    background-color: #50535B;
+    color: white;
+    font-size: 0.2rem;
+    padding: 0.1rem;
+}
+.onComConBac div{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.bottomIcon{
+    width: 1rem;
+    bottom: 0;
+    margin: 0 auto;
 }

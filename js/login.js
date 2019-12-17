@@ -27,20 +27,22 @@ $(function(){
         var tempUsername = {username:$(this).val()};
         $.ajax({
             type: "POST",
-            url: `${ip}temp_username/`,
+            url: `${ip}temp_username/`, //后端接口地址
             data: tempUsername,
             dataType: "json",
             success: function (msg) {
                 if(msg.code!=200) 
-                {
+                { //后台返回相关信息保存在msg中，若用户名重复则执行以下代码
                     $(".SignupContainer span").text(msg.message);
                     $(".SignupContainer div").fadeIn("fast");
                 }
+                // 用户名不重复时执行的代码
                 else $(".SignupContainer div").fadeOut("fast")
             }
         });
     })
     $(".SignupContainer input[name = 'SignupButton']").click(function () { 
+        // 获取数据部分
         var SignupUsername = $(".SignupContainer input[name = 'username']").val();
         var SignupPassword1 = $(".SignupContainer input[name = 'password1']").val();
         var SignupPassword2 = $(".SignupContainer input[name = 'password2']").val();
@@ -53,16 +55,14 @@ $(function(){
             telephone:phonenumber,
             sms_captcha:smsNo
         }
+        // 交互部分
         $.ajax({
-            type: "POST",
-            url: `${ip}signup/`,
-            data: Sdata,
-            dataType: "json",
-            // success:function(msg){
-            //     console.log(msg)
-            // }
+            type: "POST", //请求方式
+            url: `${ip}signup/`, //后端接口
+            data: Sdata, //传递的数据
+            dataType: "json", //数据格式
         }).then(function(msg){
-            console.log(msg) //查看返回的数据，可注释
+            // 请求成功之后的回调函数
             if(msg.code!=200)
             { 
                 $(".Signuperror p").text(msg.message);
@@ -154,12 +154,12 @@ $(function(){
         }
         $.ajax({
             type: "POST",
-            url: `${ip}login/`,
+            url: `${ip}login/`, //后端接口
             data: Logindata,
             dataType: "json",
             timeout:10000,
             success: function (msg) {
-                console.log(msg) //查看返回数据，可删除
+                // console.log(msg) //查看返回数据，可删除
                 if(msg.code!=200){
                     $(".Signuperror p").text(msg.message)
                     $(".Signuperror").fadeIn("fast",function(){
@@ -169,13 +169,13 @@ $(function(){
                     })
                 }
                 else{
-                    sessionStorage.setItem('token',msg.data.token);
-                    sessionStorage.setItem('user_id',msg.data.user_id);
+                    sessionStorage.setItem('token',msg.data.token);//临时存储到本地
+                    sessionStorage.setItem('user_id',msg.data.user_id);//临时存储到本地
                     $(".SignupSuccess p").text("登陆成功");
                     $(".SignupSuccess").fadeIn("fast",function(){
                         setTimeout(function(){
                         $(".SignupSuccess").fadeOut("fast",function(){
-                            window.location = "./profileindex.html"
+                            window.location = "./profileindex.html" //登陆成功页面跳转
                         });
                         },2000)
                     })
